@@ -8,7 +8,7 @@ using static System.Formats.Asn1.AsnWriter;
 using System.Xml.Linq;
 
 
-public class GameItem
+ class GameItem
 {
     public string Name;
     public string Level;
@@ -39,46 +39,59 @@ public class GameItem
         this.Score = Score;
     }
     public override string ToString() { return Name + "\nName" + Level + "\nLevel" + Score + "\nScere"; }
+    
+    }
 class Weapon : GameItem
+{
+    public string gun;
+    public string sword;
+
+    public Weapon(string gun, string sword) : base(gun, sword)
     {
-        public string gun;
-        public string sword;
-
-        public Weapon(string gun, string sword) : base(gun,sword)
-        {
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
     }
+
+    public Weapon()
+    {
+    }
+
+    public override string ToString()
+    {
+        return base.ToString();
+    }
+}
 class Armor : GameItem
+{
+    public string Shield;
+    public string cloak;
+
+    public Armor(string Shield, string cloak) : base(Shield, cloak)
     {
-        public string Shield;
-        public string cloak;
-
-        public Armor(string Shield, string cloak) : base(Shield, cloak)
-        {
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
     }
-    class Consumable : GameItem
+
+    public Armor()
     {
-        public string bomb;
+    }
 
-        public Consumable(string bomb) : base(bomb)
-        {
-        }
+    public override string ToString()
+    {
+        return base.ToString();
+    }
+}
+class Consumable : GameItem
+{
+    public string bomb;
 
-        public override string ToString()
-        {
-            return base.ToString();
-        }
+    public Consumable(string bomb) : base(bomb)
+    {
+    }
+
+    public Consumable()
+    {
+    }
+
+    public override string ToString()
+    {
+        return base.ToString();
     }
 }
 

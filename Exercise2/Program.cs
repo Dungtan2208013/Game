@@ -5,16 +5,16 @@
         {
 
         GameItem gameItem = new GameItem();
-        gameItem.Name = "Test";
+        gameItem.Name = "A phuc";
         gameItem.Level = "luyen khi";
         gameItem.Score = "320";
 
         Weapon weapon =new Weapon();
         weapon.sword = "fire sword";
-        weapon.guns ="AK47 guns";
+        weapon.gun = "AK47 guns";
 
         Armor armor = new Armor();
-        armor.shield = "ice shield";
+        armor.Shield = "ice shield";
         armor.cloak = "night cloak";
         Console.WriteLine("Hello, World!");
 
@@ -25,8 +25,8 @@
         Console.WriteLine(gameItem.Name);
         Console.WriteLine(gameItem.Level);
         Console.WriteLine(gameItem.Score);
-        Console.WriteLine(weapon);
-        Console.WriteLine(armor);
-        Console.WriteLine(comsumable);
+        Console.WriteLine(weapon.sword);
+        Console.WriteLine(armor.Shield);
+        Console.WriteLine(comsumable.bomb);
     }
     }
